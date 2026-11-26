@@ -12,7 +12,16 @@ public class Main {
     int min = firstNum;
     int max = firstNum;
 
-    for (i = 1; i < numbers; i++)
+    for (int i = 1; i < numbers; i++) {
+        int newNum = Integer.parseInt(input.nextLine());
+        if (newNum < min) {
+            min = newNum;
+        } else if (newNum > max) {
+            max = newNum;
+        }
+    } input.close();
+    System.out.println("min: " + min);
+    System.out.println("max: " + max);
 
 
     }
